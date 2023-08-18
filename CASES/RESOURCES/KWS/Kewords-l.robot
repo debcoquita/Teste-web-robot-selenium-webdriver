@@ -24,6 +24,7 @@ E adicionar ao carrinho
     Wait Until Element Is Visible    ${ADC-carrinho}    15
     Click Button    ${ADC-carrinho}
     Wait Until Element Is Visible    ${resultado-carrinho}    15
+    Wait Until Element Is Visible    ${IR-carrinho}
     Click Element    ${IR-carrinho}
 Então será redirecionado para a tela de carrinho
     Wait Until Element Is Visible    ${LISTA-carrinho}
