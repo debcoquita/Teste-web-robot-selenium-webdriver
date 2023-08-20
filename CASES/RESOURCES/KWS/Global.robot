@@ -7,9 +7,8 @@ ${URL}     https://www.amazon.com.br/?&tag=hydrbrabk-20&ref=pd_sl_7rwd1q78df_e&a
 *** Keywords ***
 abrir navegador
     Open Browser    ${URL}    Chrome
+    Maximize Browser Window
 
 pesquisar na amazon 
     Dado que o usuário esteja na tela inicial
-    Quando o usuário encontrar a barra de PESQUISA
-    E digitar "nexgard até 10kg"
-    Então será redirecionado para tela com a lista de PESQUISA
+    
