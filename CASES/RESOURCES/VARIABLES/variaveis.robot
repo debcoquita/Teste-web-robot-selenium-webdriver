@@ -14,6 +14,10 @@ Documentation    classe de variáveis do teste amazon
 ...    emailinput= xpath://input[@type='email'][contains(@id,'email')]
 ...    senhainput= xpath://input[contains(@placeholder,'Pelo menos 6 caracteres')]
 ...    confirmacaosenha= xpath://input[@type='password'][contains(@id,'check')]
+...    digitaremail= xpath: //input[@type='email'][contains(@id,'email')]
+...    digitarsenha= xpath: //input[@type='password'][contains(@id,'password')]
+...    efetuarlogin= xpath://input[contains(@tabindex,'5')]
+...    submeterlogin= xpath: //input[contains(@tabindex,'3')]
 
 ${produto}    xpath://span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'NexGard Antipulgas e Carrapatos para Cães de 4,1 a 10kg, 1 tablete')]
 

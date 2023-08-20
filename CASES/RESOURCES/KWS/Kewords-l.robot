@@ -55,10 +55,21 @@ E submeter o formulário
 Então uma conta no site da Amazon será criada com sucesso
     Wait Until Element Is Visible    ${AMZ.amazon}
 
-#Dado que o usuário esteja na tela inicial do site da Amazon
-#Quando clicar no "faça seu login"
-#E digitar seu e-mail corretamente
-#E submeter para próxima tela
-#E digitar a senha corretamente
-#Então será redirecionado para tela inicial com login efetuado
+Dado que o usuário esteja na tela inicial do site da Amazon
+    Wait Until Element Is Visible    ${AMZ.amazon}
+Quando clicar no "faça seu login"
+    Click Element                    ${FAZER-login}
+    Wait Until Element Is Visible    ${LOGIN.efetuarlogin}
+E digitar seu e-mail corretamente
+    Click Element    ${LOGIN.digitaremail}
+    Input Text       ${LOGIN.digitaremail}    testesautomacaodasilva@gmail.com
+E submeter para próxima tela
+    Click Element    ${LOGIN.efetuarlogin}
+E digitar a senha corretamente
+    Wait Until Element Is Visible    ${LOGIN.submeterlogin}
+    Click Element                    ${LOGIN.digitarsenha}
+    Input Password                   ${LOGIN.digitarsenha}    Admin123#
+    Click Button                     ${LOGIN.submeterlogin}
+Então será redirecionado para tela inicial com login efetuado
+    Wait Until Element Is Visible    ${AMZ.amazon}
     
